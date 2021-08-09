@@ -10,7 +10,7 @@ TARGET = snake
 SRC = $(wildcard ./src/*.c)
 OBJS = $(SRC:.c=.o)
 
-all: dirs $(TARGET) clean
+all: $(TARGET) clean
 
 $(TARGET): $(OBJS) 
 	$(CC) $(LDFLAGS) -o $(OUTDIR)/$@ $^
