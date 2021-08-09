@@ -2,6 +2,7 @@
 #define UTIL_H
 
 #include "stdbool.h"
+#include "stdlib.h"
 
 struct Vector2 {
     int x, y;
