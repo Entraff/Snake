@@ -13,7 +13,7 @@ OBJS = $(SRC:.c=.o)
 all: $(TARGET) clean
 
 $(TARGET): $(OBJS) 
-	$(CC) $(LDFLAGS) -o $(OUTDIR)/$@ $^
+	$(CC) $(LDFLAGS) -o $@ $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
