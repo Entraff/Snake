@@ -10,7 +10,7 @@ struct Vector2 *vec2_init(const int x, const int y) {
 }
 
 bool vec2cmp(struct Vector2 *a, struct Vector2 *b) {
-    return a->x == b->x &
+    return a->x == b->x &&
            a->y == b->y;
 }
 
