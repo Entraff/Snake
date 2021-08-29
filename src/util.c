@@ -14,8 +14,8 @@ bool vec2cmp(struct Vector2 *a, struct Vector2 *b) {
            a->y == b->y;
 }
 
-struct Vector2 vec2add(struct Vector2 *a, struct Vector2 *b) {
+struct Vector2 *vec2add(struct Vector2 *a, struct Vector2 *b) {
     const int x = a->x + b->x;
     const int y = a->y + b->y;
-    return (struct Vector2){ .x = x, .y = y };
+    return vec2_init(x, y);
 }
