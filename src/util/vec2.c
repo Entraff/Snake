@@ -1,4 +1,4 @@
-#include "util.h"
+#include "vec2.h"
 
 bool vec2cmp(struct Vector2 a, struct Vector2 b) {
     return a.x == b.x &&

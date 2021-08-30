@@ -7,7 +7,7 @@ CFLAGS = -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing \
 LDFLAGS = -lncurses -ltinfo
 
 TARGET = snake
-SRC = $(wildcard ./src/*.c)
+SRC = $(wildcard ./src/*.c ./src/**/*.c)
 OBJS = $(SRC:.c=.o)
 
 all: $(TARGET) clean
