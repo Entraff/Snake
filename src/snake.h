@@ -2,11 +2,11 @@
 #define SNAKE_H
 #include "segment.h"
 
-#define UP { .x = 0, .y = 1 }
-#define DOWN { .x = 0, .y = -1 }
-#define LEFT { .x = -1, .y = 0 }
-#define RIGHT { .x = 1, .y = 0 }
-#define EMPTY { .x = 0, .y = 0 }
+#define UP (struct Vector2){ .x = 0, .y = 1 }
+#define DOWN (struct Vector2){ .x = 0, .y = -1 }
+#define LEFT (struct Vector2){ .x = -1, .y = 0 }
+#define RIGHT (struct Vector2){ .x = 1, .y = 0 }
+#define EMPTY (struct Vector2){ .x = 0, .y = 0 }
 
 // The head will be represented as if it's the head
 // of a snake and not a linked list

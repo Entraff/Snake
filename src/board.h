@@ -3,7 +3,7 @@
 #include "snake.h"
 
 // Default values
-#define DEF_POS { .x = 5, .y = 5 }
+#define DEF_POS (struct Vector2){ .x = 5, .y = 5 }
 #define DEF_DIR RIGHT
 
 struct Board {
