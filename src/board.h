@@ -7,12 +7,14 @@
 #define DEF_DIR RIGHT
 
 struct Board {
+    struct Vector2 dimensions;
     struct Snake *snake;
     struct Vector2 apple;
     int score;
 };
 
 struct Board *board_init();
+void generate_apple(struct Board *board);
 void tick(struct Board *board, struct Vector2 dir);
 void render(struct Board *board);
 
