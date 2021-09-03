@@ -1,11 +1,5 @@
 #include "snake.h"
 
-const struct Vector2 UP = { .x = 0, .y = 1 };
-const struct Vector2 DOWN = { .x = 0, .y = -1 };
-const struct Vector2 LEFT = { .x = -1, .y = 0 };
-const struct Vector2 RIGHT = { .x = 1, .y = 0 };
-const struct Vector2 EMPTY = { .x = 0, .y = 0 };
-
 struct Snake *snake_init(struct Vector2 start_pos, struct Vector2 start_dir) {
     struct Snake *snake = malloc(sizeof(*snake));
     struct Segment *start_seg = segment_init(start_pos);
