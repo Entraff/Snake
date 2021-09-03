@@ -13,6 +13,7 @@ struct Board {
 };
 
 struct Board *board_init();
-void tick(struct Board* board, struct Vector2 dir);
+void tick(struct Board *board, struct Vector2 dir);
+void render(struct Board *board);
 
 #endif // BOARD_H
