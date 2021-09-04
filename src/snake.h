@@ -19,6 +19,7 @@ struct Snake {
 };
 
 struct Snake *snake_init(struct Vector2 start_pos, struct Vector2 start_dir);
+size_t snake_len(struct Snake *snake);
 bool hitting_self(struct Snake *snake);
 bool can_change_dir(struct Snake *snake, struct Vector2 dir);
 void change_dir(struct Snake *snake, struct Vector2 new_dir);

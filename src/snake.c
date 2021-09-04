@@ -11,6 +11,18 @@ struct Snake *snake_init(struct Vector2 start_pos, struct Vector2 start_dir) {
     return snake;
 }
 
+size_t snake_len(struct Snake *snake) {
+    struct Segment *current = snake->tail;
+    size_t len = 0;
+    
+    while (current != NULL) {
+        ++len;
+        current = current->next;
+    }
+
+    return len;
+}
+
 bool hitting_self(struct Snake *snake) {
     struct Segment *current = snake->tail;
     bool hitting_body;
