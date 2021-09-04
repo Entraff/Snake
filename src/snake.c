@@ -23,11 +23,25 @@ size_t snake_len(struct Snake *snake) {
     return len;
 }
 
+bool snake_contains(struct Snake *snake, struct Vector2 target) {
+    struct Segment *current = snake->tail;
+    bool found_target;
+
+    while (current != NULL) {
+        found_target = vec2cmp(current->pos, target);
+        if (found_target)
+            return true;
+        current = current->next;
+    }
+
+    return false;
+}
+
 bool hitting_self(struct Snake *snake) {
     struct Segment *current = snake->tail;
     bool hitting_body;
 
-    while (current != NULL) {
+    while (current != snake->head) {
         hitting_body = vec2cmp(current->pos, snake->head->pos);
         if (hitting_body)
             return true;
