@@ -13,8 +13,11 @@ struct Board {
     int score;
 };
 
-struct Board *board_init();
 void generate_apple(struct Board *board);
+struct Board *board_init(struct Vector2 dimensions);
+bool exceeds_bounds(struct Board *board);
+bool has_died(struct Board *board);
+bool eating_apple(struct Board *board);
 void tick(struct Board *board, struct Vector2 dir);
 void render(struct Board *board);
 
